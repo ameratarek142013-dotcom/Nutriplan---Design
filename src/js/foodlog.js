@@ -178,7 +178,7 @@ function renderLoggedItems() {
                </div>`
                 }
         <div class="min-w-0">
-          <p class="font-bold text-gray-900 text-sm truncate">${item.name}</p>
+          <p class="font-bold text-gray-900 text-sm truncate">${item.name.split(" ",3).join(" ")}</p>
           <div class="flex items-center flex-wrap gap-x-2 text-[11px] text-gray-400 mt-0.5">
             <span style="padding-inline: 5px;"  class="font-medium text-gray-500">${item.servings || 1} serving</span>
             <span style="padding-inline: 5px;" class="text-gray-300">•</span>
