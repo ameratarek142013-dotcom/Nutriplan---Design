@@ -40,3 +40,14 @@
     transform: translateX(0);
   }
 }
+
+@media (min-width: 768px) {
+  .card-item {
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+  .inner-macros {
+    width: auto !important;
+    flex-wrap: nowrap !important;
+  }
+}

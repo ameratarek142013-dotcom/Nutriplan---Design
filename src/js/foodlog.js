@@ -168,7 +168,7 @@ function renderLoggedItems() {
     container.innerHTML = loggedItems
         .map(
             (item) => `
-    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-4 bg-gray-50/40 hover:bg-gray-50 rounded-xl border border-gray-100 transition-all" data-item-id="${item.id}">
+    <div style="display:flex; flex-direction:column;" class="justify-between gap-3 p-4 bg-gray-50/40 hover:bg-gray-50 rounded-xl border border-gray-100 transition-all card-item" data-item-id="${item.id}">
       
       <div class="flex items-center gap-3 flex-1 min-w-0">
         ${item.image
@@ -188,7 +188,7 @@ function renderLoggedItems() {
         </div>
       </div>
       
-      <div class="flex items-center gap-2 flex-wrap w-full sm:w-auto sm:flex-nowrap">
+      <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;" class="inner-macros">
         <div class="text-right min-w-[55px]">
           <span class="block text-base font-bold text-xl text-emerald-600">${item.calories}</span>
           <span class="block text-[10px] text-gray-400 font-medium -mt-1">kcal</span>
