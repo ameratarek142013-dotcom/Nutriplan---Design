@@ -2,7 +2,6 @@
 
 const sidebar = document.getElementById("sidebar");
 const overlay = document.getElementById("sidebar-overlay");
-const menuBtn = document.getElementById("header-menu-btn");
 const closeBtn = document.getElementById("sidebar-close-btn");
 
 function openSidebar() {
@@ -15,7 +14,10 @@ function closeSidebar() {
   overlay.classList.remove("active");
 }
 
-menuBtn.addEventListener("click", openSidebar);
+
+document.getElementById("header").addEventListener("click", (e) => {
+  if (e.target.closest("#header-menu-btn")) openSidebar();
+});
 overlay.addEventListener("click", closeSidebar);
 closeBtn.addEventListener("click", closeSidebar);
 
